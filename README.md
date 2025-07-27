@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# 🧠 Natural Language to SQL (NL2SQL) GenAI Assistant
 
-## Project info
+A powerful AI-powered web application that allows users to interact with a structured SQL database using plain English. Built with **React + TypeScript**, powered by **OpenAI's GPT API**, and styled for a clean, professional user experience.
 
-**URL**: https://lovable.dev/projects/f35125e5-d803-4222-93e4-ea453a5caac6
+---
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+🔗 https://lovable.dev/projects/f35125e5-d803-4222-93e4-ea453a5caac6
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f35125e5-d803-4222-93e4-ea453a5caac6) and start prompting.
+## 🎯 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+✅ Natural language to SQL conversion using **GPT-4**  
+✅ Interactive UI built with **React + Tailwind**  
+✅ Connects to a **realistic e-commerce database**  
+✅ **Schema explorer** with table relationships  
+✅ **Interactive charts** (bar/line/pie) using Recharts  
+✅ **Query history** with SQL + natural language pairing  
+✅ **CSV export** of query results  
+✅ **Safe SQL validator** (blocks DROP, DELETE, etc.)  
+✅ Supports **dark mode** UI  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📊 Example Queries
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Try asking:
 
-Follow these steps:
+- "Show total sales per customer"
+- "Top 5 selling products in the last 30 days"
+- "List customers who placed more than 2 orders"
+- "Revenue per region this year"
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧠 How It Works
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **User Input**: User types a plain English question.
+2. **Prompting**: The app sends a schema-aware, few-shot engineered prompt to OpenAI.
+3. **LLM Response**: GPT generates the SQL query.
+4. **Validation**: SQL is validated and executed on the database.
+5. **Results Display**: Returned as a table and visualized in a chart.
+6. **History Logging**: Each query is saved with timestamp and result.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🗂️ Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Layer       | Tech                          |
+|-------------|-------------------------------|
+| Frontend    | React + TypeScript + Tailwind |
+| AI Engine   | OpenAI GPT-4 API              |
+| Charts      | Recharts                      |
+| DB          | SQLite (mock backend schema)  |
+| Deployment  | Vercel                        |
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛡️ SQL Safety
 
-## What technologies are used for this project?
+To ensure production safety:
+- The app **blocks** queries that include `DROP`, `DELETE`, `UPDATE`, `INSERT`, or `TRUNCATE`.
+- Only **SELECT** queries are allowed.
+- Queries are run in a **read-only** context.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔐 Environment Variables
 
-## How can I deploy this project?
+Create a `.env` file in the root of your project:
 
-Simply open [Lovable](https://lovable.dev/projects/f35125e5-d803-4222-93e4-ea453a5caac6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+REACT_APP_OPENAI_API_KEY=your_openai_api_key
