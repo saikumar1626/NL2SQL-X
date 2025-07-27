@@ -1,0 +1,7 @@
+
+---
+
+#### 2. **No `.gitignore` File**
+❌ Risk of committing node_modules or `.env`.
+
+**Fix:** Add a `.gitignore` file:
