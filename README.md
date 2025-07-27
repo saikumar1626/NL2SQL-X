@@ -54,7 +54,7 @@ Try asking:
 | AI Engine   | OpenAI GPT-4 API              |
 | Charts      | Recharts                      |
 | DB          | SQLite (mock backend schema)  |
-| Deployment  | Vercel                        |
+| Deployment  | Lovable                       |
 
 ---
 
